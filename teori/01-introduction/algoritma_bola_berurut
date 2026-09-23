@@ -1,0 +1,10 @@
+algoritma bola terurut:
+langkah langkah:
+1. ambil bola ke 1 yang didalam kotak hitam 
+2. ambil bola ke 2 yang didalam kotak hitam
+3. ambil bola k3 3 yang didalam kotak hitam
+4. taruh bola di meja dengan urut 
+- taruh bola ke 1,2,3 di meja
+- jika bola dengan nilai yang paling kecil di taruh dipaling depan
+- jika bola dengan nilai yang paling besar di taruh dipaling belakang
+- dan jika bola dengan nilai diantara paling kecil dan paling besar di taruh di tengah
