@@ -215,10 +215,11 @@ func main() {
 ```
 
 ##### Output
-!![\[Screenshot Output Unguided\]](unguided/cacahuang/output.png)
+![!!praktikum/02-bahasa-pemrograman-go/unguided/kalkulator/output.png](unguided/kalkulator/output.png)
 
 #### Deskripsi
-[Tuliskan ringkasan proses praktikum: apa yang dikerjakan, bagian guided dan unguided yang diimplementasikan, serta hasil yang diperoleh.]
+Program di atas adalah program kalkulator, dimana program membaca nilai yang kita inputkan lalu disimpan dalam variabel "a" dan "b" keduanya adalah (float64). Variable yang kita inputkan akan dieksekusi dengan metode matematika dasar seperti penjumalahan, pengurangan, perkalian, pembagian, dan sisa bagi.
+
 
 <!-- Duplikasi blok "### [nama_soal]" sesuai jumlah folder soal di dalam unguided -->
 
@@ -259,13 +260,17 @@ func main() {
 
 ##### Output
 <!-- Path relatif dari readme.md ke folder unguided/[nama_soal]/output.png, contoh: -->
-![Screenshot Output Unguided](https://github.com/renwxyz/alpro-11-01/blob/main/praktikum/02-bahasa-pemrograman-go/unguided/cacahuang/output.png)
+![!\[Screenshot Output Unguided\]praktikum\02-bahasa-pemrograman-go\unguided\cacahuang\output.png](unguided/cacahuang/output.png)
 
 
 #### Deskripsi
-[Tuliskan ringkasan proses praktikum: apa yang dikerjakan, bagian guided dan unguided yang diimplementasikan, serta hasil yang diperoleh.]
+Program di atas bertujuan untuk mencacah uang yang kita inputkan ke dalam variable "nilaiUang" (uint64) dengan cara nilaiUang dibagi 10000 lalu sisa nilaiUang dibagi sisa 10000 lalu sisa dibagi 5000 lalu sisanya dibagi hasil 5000 lalu sisa akhir dibagi 1000.
+
+#### kesimpuln
+Praktikum ini bertujuan untuk mengenalkan dasar - dasar bahasa pemrograman Go dan menjelaskan bagaimana cara penggunaannya melalui beberapa latian membuat program yang ada di atas.
 
 ## Referensi
-1. [Nama Penulis]. ([Tahun]). *[Judul Buku/Sumber]*. [Kota]: [Penerbit]. Diakses pada [tanggal akses] melalui [tautan/DOI]
-2. [Nama Penulis]. ([Tahun]). *[Judul Buku/Sumber]*. [Kota]: [Penerbit]. Diakses pada [tanggal akses] melalui [tautan/DOI]
+1. Irvan Eksa Mahendra. (2021). *medium.com*. 
+2. Noval Agung Prayogo. (2019). *dasarpemrogramangolang.novalagung.com.*.
+3. Abdullah Fawwaz Qudamah. (2026). fawwaz.id
 <!-- Tambahkan nomor referensi berikutnya sesuai kebutuhan -->
