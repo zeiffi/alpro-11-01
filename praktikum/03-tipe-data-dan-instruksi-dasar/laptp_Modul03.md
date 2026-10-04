@@ -23,7 +23,7 @@ func main() {
 
 ##### Output
 <!-- Path relatif dari readme.md ke folder unguided/[nama_soal]/output.png, contoh: -->
-![Screenshot Output Unguided](TP_1/Output.png)
+![Screenshot Output Unguided](/praktikum/03-tipe-data-dan-instruksi-dasar/TP_03/TP_1/output.png)
 
 
 #### Deskripsi
@@ -55,7 +55,7 @@ func main() {
 
 ##### Output
 <!-- Path relatif dari readme.md ke folder unguided/[nama_soal]/output.png, contoh: -->
-![Screenshot Output Unguided](/praktikum/03-tipe-data-dan-instruksi-dasar/TP_2/Output.png)
+![Screenshot Output Unguided](/praktikum/03-tipe-data-dan-instruksi-dasar/TP_03/TP_2/Output.png)
 
 
 #### Deskripsi
@@ -84,7 +84,7 @@ func main (){
 
 ##### Output
 <!-- Path relatif dari readme.md ke folder unguided/[nama_soal]/output.png, contoh: -->
-![Screenshot Output Unguided](/praktikum/03-tipe-data-dan-instruksi-dasar/TP_3/Output.png)
+![Screenshot Output Unguided](/praktikum/03-tipe-data-dan-instruksi-dasar/TP_03/TP_3/Output.png)
 
 
 #### Deskripsi 

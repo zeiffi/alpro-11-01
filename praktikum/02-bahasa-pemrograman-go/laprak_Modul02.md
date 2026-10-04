@@ -1,4 +1,4 @@
-# <h1 align="center">Laporan Praktikum Modul 1 - dasar pemograman go</h1>
+# <h1 align="center">Laporan Praktikum Modul 02 - dasar pemograman go</h1>
 <p align="center">muhammad seheif fahri - 109092600016</p>
 
 ## Dasar Teori
