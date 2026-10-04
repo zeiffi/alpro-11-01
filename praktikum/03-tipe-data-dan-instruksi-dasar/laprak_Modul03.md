@@ -1,5 +1,5 @@
-# <h1 align="center">Laporan Praktikum Modul [Nomor Modul] - [Judul Modul/Topik]</h1>
-<p align="center">[Nama Praktikan] - [NIM]</p>
+# <h1 align="center">Laporan Praktikum Modul 03 - Variabel dan Oprator</h1>
+<p align="center">MUHAMMAD SEHIF FAHRI - 109092600016</p>
 
 ## Dasar Teori
 
