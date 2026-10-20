@@ -3,16 +3,34 @@
 
 ## Dasar Teori
 
-### A. [Judul Topik Dasar Teori 1, misal: Bahasa Pemrograman Go]
-[Tuliskan penjelasan teori terkait topik ini. Sertakan kutipan/rujukan jika perlu, contoh: Menurut [Nama Penulis] ([Tahun]), ...]
+### A. Konsep Dasar Struktur Perulangan (Looping) dan For Loop di Go
+Menurut konsep Algoritma dan Pemrograman Telkom University Purwokerto, perulangan (looping) adalah struktur kontrol yang digunakan untuk mengeksekusi satu blok kode secara berulang-ulang selama suatu kondisi tertentu masih terpenuhi. Berbeda dengan bahasa pemrograman lain yang menyediakan banyak kata kunci perulangan (for, while, do-while), bahasa pemrograman Go hanya menyediakan satu kata kunci utama yaitu for. Meskipun hanya menggunakan satu kata kunci, fleksibilitas bentuk sintaksnya mampu menggantikan seluruh fungsi perulangan tersebut, mulai dari bentuk klasik tiga komponen, pengganti while, hingga perulangan tanpa henti (infinite loop).
 
-### B. [Judul Topik Dasar Teori 2, misal: Package dan Struktur Program di Go]
+### B. Bentuk Pengulangan dan Perulangan Bersarang (Nested Loop) dalam Go
 
-#### 1. [Judul Sub-topik 1, misal: Pengertian Package main dan func main()]
-[Penjelasan sub-topik 1]
+#### 1. For dengan Tiga Konponen (ala C):
+Bentuk klasik menggunakan inisialisasi, kondisi, dan post-statement
+```go
+for i := 1; i <= 5; i++
+```
 
-#### 2. [Judul Sub-topik 2, misal: Tipe Data dan Deklarasi Variabel di Go]
-[Penjelasan sub-topik 2]
+#### 2. For sebagai Pengganti While :
+Hanya menyertakan kondisi saja tanpa inisialisasi dan post-statement
+```go
+for counter < 5
+```
+
+#### 3. For Tanpa Kondisi (Infinite Loop):
+Perulangan tanpa henti yang biasanya dikendalikan menggunakan pernyataan break di dalam blok kodenya
+```go 
+for { ... } i++
+```
+
+#### 4. For-Range:
+Digunakan khusus untuk melakukan iterasi atau menelusuri elemen pada koleksi data seperti slice, array, string, atau map
+```go 
+for index, value := range buah
+```
 
 <!-- Tambahkan poin A, B, C, ... atau sub-topik 1, 2, 3, ... sesuai kebutuhan modul -->
 
@@ -41,7 +59,7 @@ func main() {
 }
 ```
 #### Deskripsi
-[Tuliskan ringkasan proses praktikum: apa yang dikerjakan, bagian guided dan unguided yang diimplementasikan, serta hasil yang diperoleh.]
+Program ini menghitung total tabungan Budi selama $n$ hari dengan menjumlahkan setoran awal $a$ yang terus bertambah sebesar $b$ setiap harinya menggunakan perulangan for
 
 ### 2. tebesar.go
 
@@ -71,6 +89,7 @@ func main() {
 }
 ```
 #### Deskripsi
+ Program ini bertugas mencari nilai atau angka paling tinggi dari sekumpulan $n$ bilangan bulat yang dimasukkan oleh pengguna dengan cara membandingkannya satu persatu.
 
 
 ### 3. bisokop.go
@@ -132,45 +151,92 @@ func main() {
 }
 ```
 #### Deskripsi
-[Tuliskan ringkasan proses praktikum: apa yang dikerjakan, bagian guided dan unguided yang diimplementasikan, serta hasil yang diperoleh.]
+Program ini menghitung total harga tiket bioskop dari beberapa transaksi berdasarkan jenis film dan hari, lalu otomatis memberikan diskon 10% jika pembelian tiket dalam satu transaksi mencapai 5 atau lebih.
 
 <!-- Tambahkan blok file/kode lain sesuai jumlah file pada soal guided -->
 
 ## Unguided
 
-### 1. [nama_soal, misal: cacahuang]
+### 1. prima.go
 
 ```go
-[Tempelkan kode program di sini, contoh: cacahuang.go]
+package main
+
+import "fmt"
+
+func main() {
+	var n int
+	fmt.Print("Masukkan bilangan bulat positif n: ")
+	fmt.Scan(&n)
+
+	fmt.Printf("Faktor dari %d: ", n)
+	jumlahFaktor := 0
+	
+	for i := 1; i <= n; i++ {
+		if n%i == 0 {
+			fmt.Printf("%d ", i)
+			jumlahFaktor++
+		}
+	}
+	fmt.Printf("(%d faktor)\n", jumlahFaktor)
+
+	if jumlahFaktor == 2 {
+		fmt.Printf("%d adalah bilangan prima\n", n)
+	} else {
+		fmt.Printf("%d bukan bilangan prima\n", n)
+	}
+}
+
 ```
 
 ##### Output
 <!-- Path relatif dari readme.md ke folder unguided/[nama_soal]/output.png, contoh: -->
-![Screenshot Output Unguided](https://github.com/renwxyz/alpro-11-01/blob/main/praktikum/02-bahasa-pemrograman-go/unguided/cacahuang/output.png)
+![Screenshot Output Unguided](/praktikum/05-perulangan-for-loop/unguided/perima.go/output.png)
 
 
 #### Deskripsi
-[Tuliskan ringkasan proses praktikum: apa yang dikerjakan, bagian guided dan unguided yang diimplementasikan, serta hasil yang diperoleh.]
-
-### 2. [nama_soal, misal: kalkulator]
+Program ini mencari seluruh faktor pembagi dari sebuah bilangan bulat positif $n$ dan menghitung jumlahnya untuk menentukan apakah bilangan tersebut termasuk bilangan prima atau bukan
+### 2. acct.go
 
 ```go
-[Tempelkan kode program di sini, contoh: kalkulator.go]
+package main
+
+import "fmt"
+
+func main() {
+	var m int
+	fmt.Print("Masukkan jumlah mahasiswa: ")
+	fmt.Scan(&m)
+
+	jumlahLolos := 0
+
+	for i := 1; i <= m; i++ {
+		var p, v, ga, fs, ci, tc float64
+		
+		fmt.Scan(&p, &v, &ga, &fs, &ci, &tc)
+
+		rataRata := (p + v + ga + fs + ci + tc) / 6.0
+
+		if rataRata >= 3.33 {
+			fmt.Println("Mendapat Sertifikat")
+			jumlahLolos++
+		} else {
+			fmt.Println("Tidak Mendapat Sertifikat")
+		}
+	}
+	fmt.Printf("Jumlah yang mendapat sertifikat: %d\n", jumlahLolos)
+}
 ```
 
 ##### Output
-![Screenshot Output Unguided](unguided/[nama_soal]/output.png)
+![Screenshot Output Unguided](/praktikum/05-perulangan-for-loop/unguided/acct/output.png)
 
 #### Deskripsi
-[Tuliskan ringkasan proses praktikum: apa yang dikerjakan, bagian guided dan unguided yang diimplementasikan, serta hasil yang diperoleh.]
+Program ini mengevaluasi rata-rata dari 6 nilai tes ECCT untuk setiap mahasiswa baru guna menentukan kelulusan sertifikat (minimal 3.33) sekaligus menghitung total mahasiswa yang lulus.
 
 <!-- Duplikasi blok "### [nama_soal]" sesuai jumlah folder soal di dalam unguided -->
 
 
 ## Kesimpulan
-[Tuliskan kesimpulan yang menjawab tujuan praktikum berdasarkan hasil yang diperoleh.]
-
-## Referensi
-1. [Nama Penulis]. ([Tahun]). *[Judul Buku/Sumber]*. [Kota]: [Penerbit]. Diakses pada [tanggal akses] melalui [tautan/DOI]
-2. [Nama Penulis]. ([Tahun]). *[Judul Buku/Sumber]*. [Kota]: [Penerbit]. Diakses pada [tanggal akses] melalui [tautan/DOI]
-<!-- Tambahkan nomor referensi berikutnya sesuai kebutuhan -->
+Struktur perulangan for dalam bahasa Go sangat fleksibel—mulai dari bentuk klasik tiga komponen, pengganti while, hingga for-range—yang diterapkan pada tugas terbimbing seperti menghitung tabungan, mencari nilai terbesar, dan rekapitulasi bioskop, serta tugas mandiri seperti mencari faktor prima dan mengevaluasi rata-rata nilai sertifikat mahasiswa.
+1. Hidayat, R., & Pratama, A. (2025)
