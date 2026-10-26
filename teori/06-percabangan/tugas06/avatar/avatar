@@ -1,0 +1,39 @@
+// kamus
+//     p: integer
+//     kapasitas_dewasa, kapasitas_kecil: integer
+//     jml_dewasa, jml_kecil: integer
+//     sisa_orang: integer
+// algoritma
+//     input(p)
+//     
+//     // Kapasitas maksimal: 3 Appa dewasa (@5) = 15 orang, 5 Appa kecil (@2) = 10 orang (Total 25 orang)
+//     
+//     // Hitung pemakaian Appa dewasa (maks 3)
+//     if p >= 15 then
+//         jml_dewasa <- 3
+//         p <- p - 15
+//     else
+//         jml_dewasa <- p / 5
+//         p <- p mod 5
+//     endif
+//     
+//     // Hitung pemakaian Appa kecil (maks 5) dari sisa orang
+//     if p >= 10 then
+//         jml_kecil <- 5
+//         p <- p - 10
+//     else
+//         jml_kecil <- p / 2
+//         p <- p mod 2
+//     endif
+//     
+//     // Sisa orang yang tidak bisa berangkat
+//     sisa_orang <- p
+//     
+//     // Output hasil
+//     if sisa_orang > 0 then
+//         output("Dewasa", jml_dewasa, ", kecil", jml_kecil, ", dan", sisa_orang, "tak berangkat")
+//     else if jml_kecil > 0 then
+//         output("Dewasa", jml_dewasa, ", kecil", jml_kecil)
+//     else
+//         output("Dewasa", jml_dewasa)
+//     endif

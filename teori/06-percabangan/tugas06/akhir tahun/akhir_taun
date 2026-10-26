@@ -1,0 +1,30 @@
+// kamus
+//     total_belanja: integer
+//     buat_kartu: boolean
+//     dapat_diskon, dapat_cashback: boolean
+//     bayar: real
+// algoritma
+//     input(total_belanja, buat_kartu)
+//     
+//     // Cek diskon 10% jika belanja >= 100.000
+//     if total_belanja >= 100000 then
+//         dapat_diskon <- true
+//         bayar <- real(total_belanja) - (0.10 * real(total_belanja))
+//     else
+//         dapat_diskon <- false
+//         bayar <- real(total_belanja)
+//     endif
+//     
+//     // Cek cashback (hanya jika bersedia buat kartu DAN total belanja setelah diskon >= 200.000)
+//     if buat_kartu and (bayar >= 200000) then
+//         dapat_cashback <- true
+//         bayar <- bayar - 75000
+//     else
+//         dapat_cashback <- false
+//     endif
+//     
+//     // Output sesuai format
+//     output("Kartu?", buat_kartu)
+//     output("Diskon?", dapat_diskon)
+//     output("Cashback?", dapat_cashback)
+//     output("Rp.", bayar)
