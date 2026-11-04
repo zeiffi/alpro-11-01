@@ -1,5 +1,5 @@
-# <h1 align="center">Laporan Praktikum Modul [Nomor Modul] - [Judul Modul/Topik]</h1>
-<p align="center">[Nama Praktikan] - [NIM]</p>
+# <h1 align="center">Laporan Praktikum Modul 07 - PERCABANGAN</h1>
+<p align="center">MUHAMMAD SHEIF FAHRI - 109092600016</p>
 
 ## Dasar Teori
 
