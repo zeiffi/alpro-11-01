@@ -1,0 +1,36 @@
+package main
+ 
+import "fmt"
+ 
+func main() {
+	var x, prev, tertinggi, terendah, jumlah, banyak int
+ 
+	// baca angka pertama (selalu dihitung)
+	fmt.Scan(&x)
+	tertinggi = x
+	terendah = x
+	jumlah = x
+	banyak = 1
+	prev = x
+ 
+	// baca angka berikutnya sampai ada angka kembar berturut-turut
+	for {
+		n, _ := fmt.Scan(&x)
+		if n != 1 || x == prev {
+			break
+		}
+		if x > tertinggi {
+			tertinggi = x
+		}
+		if x < terendah {
+			terendah = x
+		}
+		jumlah += x
+		banyak++
+		prev = x
+	}
+ 
+	rata := float64(jumlah) / float64(banyak)
+	fmt.Printf("%d %d %.2f\n", tertinggi, terendah, rata)
+}
+ 
