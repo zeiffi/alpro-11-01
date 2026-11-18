@@ -2,56 +2,57 @@ package main
 
 import "fmt"
 
-const NMAX int = 100
+const NMAX int = 999
 
-type student struct {
-	nim, name string
-	grade     float64
+type rapot struct {
+	matkul string
+	nilai  int
 }
 
-type students [NMAX]student
+type tabRapot [NMAX]rapot
 
-func cariNIM(T students, n int, nim string) int {
-	for i := 0; i < n; i++ {
-		if T[i].nim == nim {
-			return i
-		}
+func nilaiHuruf(x int) string {
+	if x > 80 {
+		return "A"
+	} else if x > 70 {
+		return "AB"
+	} else if x > 65 {
+		return "B"
+	} else if x > 60 {
+		return "BC"
+	} else if x > 50 {
+		return "C"
+	} else if x > 40 {
+		return "D"
+	} else {
+		return "E"
 	}
-	return -1
 }
 
-func rataRata(T students, n int) float64 {
-	var total float64 = 0.0
+func rataRata(T tabRapot, n int) float64 {
+	var total int = 0
 	for i := 0; i < n; i++ {
-		total += T[i].grade
+		total += T[i].nilai
 	}
-	return total / float64(n)
+	return float64(total) / float64(n)
 }
 
 func main() {
-	var T students
-	var n int = 0
-	var nim, name string
-	var grade float64
+	var T tabRapot
+	var n int
 
-	for {
-		fmt.Scan(&nim)
-		if nim == "STOP" {
-			break
-		}
-		fmt.Scan(&name, &grade)
-
-		if cariNIM(T, n, nim) == -1 && n < NMAX {
-			T[n].nim = nim
-			T[n].name = name
-			T[n].grade = grade
-			n++
-		}
-	}
-
+	fmt.Print("Masukkan jumlah mata kuliah : ")
+	fmt.Scan(&n)
+	fmt.Println("Masukkan nama mata kuliah dan nilai : ")
 	for i := 0; i < n; i++ {
-		fmt.Println(T[i].nim, T[i].name, T[i].grade)
+		fmt.Scan(&T[i].matkul, &T[i].nilai)
+	}
+	fmt.Println("=====================================")
+	fmt.Println("Daftar nilai mata kuliah : ")
+	for i := 0; i < n; i++ {
+		fmt.Println(T[i].matkul, T[i].nilai, nilaiHuruf(T[i].nilai))
 	}
 
 	fmt.Printf("Rata-rata nilai: %.2f\n", rataRata(T, n))
+	fmt.Println("=====================================")
 }
