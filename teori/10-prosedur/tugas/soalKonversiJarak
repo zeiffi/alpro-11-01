@@ -1,0 +1,16 @@
+fungsi konversi(km, m, cm : integer) -> integer
+kamus
+    total_cm : integer
+algoritma
+    total_cm <- (km * 100000) + (m * 100) + cm
+    kembalikan total_cm
+akhirfungsi
+
+program KonversiJarak
+kamus
+    km, m, cm, hasil : integer
+algoritma
+    input(km, m, cm)
+    hasil <- konversi(km, m, cm)
+    output("Hasil konversi = ", hasil, " cm")
+akhirprogram

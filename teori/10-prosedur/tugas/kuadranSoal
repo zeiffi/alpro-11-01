@@ -1,0 +1,31 @@
+fungsi cekKuadran(x, y : integer) -> string
+kamus
+    posisi : string
+algoritma
+    jika (x == 0) dan (y == 0) maka
+        posisi <- "Titik Asal"
+    lainnya jika (x != 0) dan (y == 0) maka
+        posisi <- "Sumbu X"
+    lainnya jika (x == 0) dan (y != 0) maka
+        posisi <- "Sumbu Y"
+    lainnya jika (x > 0) dan (y > 0) maka
+        posisi <- "Kuadran I"
+    lainnya jika (x < 0) dan (y > 0) maka
+        posisi <- "Kuadran II"
+    lainnya jika (x < 0) dan (y < 0) maka
+        posisi <- "Kuadran III"
+    lainnya
+        posisi <- "Kuadran IV"
+    akhirjika
+    kembalikan posisi
+akhirfungsi
+
+program TentukanKuadran
+kamus
+    x, y : integer
+    hasil : string
+algoritma
+    input(x, y)
+    hasil <- cekKuadran(x, y)
+    output(hasil)
+akhirprogram

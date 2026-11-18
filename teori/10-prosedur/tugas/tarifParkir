@@ -1,0 +1,20 @@
+fungsi hitungTarifParkir(jam : integer) -> integer
+kamus
+    tarif : integer
+algoritma
+    jika jam <= 2 maka
+        tarif <- 5000
+    lainnya
+        tarif <- 5000 + ((jam - 2) * 3000)
+    akhirjika
+    kembalikan tarif
+akhirfungsi
+
+program TarifParkir
+kamus
+    lama_parkir, total_bayar : integer
+algoritma
+    input(lama_parkir)
+    total_bayar <- hitungTarifParkir(lama_parkir)
+    output(total_bayar)
+akhirprogram

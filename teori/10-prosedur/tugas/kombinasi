@@ -1,0 +1,35 @@
+fungsi faktorial(bil : integer) -> integer
+kamus
+    i, hasil : integer
+algoritma
+    hasil <- 1
+    untuk i <- 1 sampai bil lakukan
+        hasil <- hasil * i
+    akhiruntuk
+    kembalikan hasil
+akhirfungsi
+
+fungsi kombinasi(n, r : integer) -> integer
+kamus
+    hasil : integer
+algoritma
+    hasil <- faktorial(n) / (faktorial(r) * faktorial(n - r))
+    kembalikan hasil
+akhirfungsi
+
+program HitungKombinasi
+kamus
+    x, y, fak_x, fak_y, hasil_kombinasi : integer
+algoritma
+    input(x, y)
+    fak_x <- faktorial(x)
+    fak_y <- faktorial(y)
+    
+    jika x >= y maka
+        hasil_kombinasi <- kombinasi(x, y)
+    lainnya
+        hasil_kombinasi <- kombinasi(y, x)
+    akhirjika
+    
+    output(fak_x, " ", fak_y, " ", hasil_kombinasi)
+akhirprogram

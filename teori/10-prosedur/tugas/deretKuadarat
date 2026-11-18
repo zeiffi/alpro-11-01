@@ -1,0 +1,19 @@
+fungsi jumlahDeretKuadrat(N : integer) -> integer
+kamus
+    i, total : integer
+algoritma
+    total <- 0
+    untuk i <- 1 sampai N lakukan
+        total <- total + (i * i)
+    akhiruntuk
+    kembalikan total
+akhirfungsi
+
+program DeretKuadrat
+kamus
+    N, hasil : integer
+algoritma
+    input(N)
+    hasil <- jumlahDeretKuadrat(N)
+    output(hasil)
+akhirprogram
